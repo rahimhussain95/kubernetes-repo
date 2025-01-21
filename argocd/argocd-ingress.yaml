@@ -1,3 +1,5 @@
+# NGINX Ingress routing to securely expose and route the ArgoCD server containerized K8s pod
+# Configures NGINX as the ingress-controlller and redirects to HTTPS connection for ArgoCD
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:

@@ -1,3 +1,5 @@
+# Allows for centralized ArgoCD app management through a consolidated "app" that routes to ArgoCD apps within the pipeline
+
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -11,7 +13,7 @@ spec:
   source:
     repoURL: https://github.com/rahimhussain95/kubernetes-repo.git
     targetRevision: main
-    path: argocd  # Path to ArgoCD folder that contains app configurations
+    path: argocd 
   syncPolicy:
     automated:
       prune: true

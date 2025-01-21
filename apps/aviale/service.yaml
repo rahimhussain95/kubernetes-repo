@@ -1,4 +1,5 @@
-# Exposes Aviale internally to accept connection from Cluster
+# Securely exposes Aviale K8s pod internally to accept connection from local cluster
+
 apiVersion: v1
 kind: Service
 metadata:

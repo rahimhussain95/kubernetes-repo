@@ -1,9 +1,13 @@
+# Configures Aviale within ArgoCD environment
+# This configuration file is handled/implemented through the ArgoCD UI thus rendering aviale-application.yaml deprecated
+# This file exists as a backup in case precise configuration is desired or as a failsafe in the event of ArgoCD UI error
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: aviale
   namespace: argocd
 spec:
+  project: aviale
   destination:
     namespace: default
     server: https://kubernetes.default.svc

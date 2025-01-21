@@ -1,4 +1,5 @@
-# Defines parameters for Aviale container and pod configurations
+# Defines parameters for deployment and management of the app pod>container
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:

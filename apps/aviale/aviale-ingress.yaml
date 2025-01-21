@@ -1,4 +1,5 @@
-# Maps domain requests to the NGINX-ingress controller locally
+# Maps domain requests to the NGINX-ingress controller, exposing the app externally outside the cluster
+
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
