@@ -1,0 +1,29 @@
+# Defines parameters for Aviale container and pod configurations
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aviale
+  labels:
+    app: aviale
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aviale
+  template:
+    metadata:
+      labels:
+        app: aviale
+    spec:
+      containers:
+      - name: aviale
+        image: rahimhussain95/aviale:latest
+        ports:
+        - containerPort: 5000
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"

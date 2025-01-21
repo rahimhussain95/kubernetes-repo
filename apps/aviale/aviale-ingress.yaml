@@ -1,0 +1,21 @@
+# Maps domain requests to the NGINX-ingress controller locally
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: aviale-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: aviale.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: aviale-service
+            port:
+              number: 5000
+

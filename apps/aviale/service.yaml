@@ -1,0 +1,15 @@
+# Exposes Aviale internally to accept connection from Cluster
+apiVersion: v1
+kind: Service
+metadata:
+  name: aviale-service
+  labels:
+    app: aviale
+spec:
+  selector:
+    app: aviale
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: ClusterIP

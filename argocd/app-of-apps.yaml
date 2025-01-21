@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/rahimhussain95/kubernetes-repo.git
+    targetRevision: main
+    path: argocd  # Path to ArgoCD folder that contains app configurations
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
