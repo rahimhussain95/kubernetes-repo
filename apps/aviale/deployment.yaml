@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: aviale
-        image: rahimhussain95/aviale:396ca00e76afa74aefc7352261534f3ae0f18cf7
+        image: rahimhussain95/aviale:2f8c556ba38526ef960c0de54487f617c8919530
         ports:
         - containerPort: 5000
         resources:
