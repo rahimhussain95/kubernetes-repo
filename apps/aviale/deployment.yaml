@@ -18,12 +18,12 @@ spec:
     spec:
       containers:
       - name: aviale
-        image: rahimhussain95/aviale:{{ env.IMAGE_TAG }}
+        image: rahimhussain95/aviale:3203efd6bc3e9cee44c1bf6c7724a40884c62b5e
         env:
         - name: AERO_API_KEY
-          value: "${AERO_API_KEY}"  
+          value: "0cdFDvAgREHNAXtyeJiZcJeeADYMSKcr"  
         - name: AERO_API_SOURCE
-          value: "${AERO_API_SOURCE}"  
+          value: "https://aeroapi.flightaware.com/aeroapi"  
         ports:
         - containerPort: 5000
         resources:
