@@ -19,6 +19,11 @@ spec:
       containers:
       - name: aviale
         image: rahimhussain95/aviale:2f8c556ba38526ef960c0de54487f617c8919530
+        env:
+        - name: AERO_API_KEY
+          value: "${AERO_API_KEY}"  
+        - name: AERO_API_SOURCE
+          value: "${AERO_API_SOURCE}"  
         ports:
         - containerPort: 5000
         resources:
