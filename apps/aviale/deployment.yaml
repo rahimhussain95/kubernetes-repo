@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: aviale
-        image: rahimhussain95/aviale:98d6cdef018c07b2d6301af8f5b441220128b801
+        image: rahimhussain95/aviale:c4c15ce87a197d25e91e5aa004fe58bf583af266
         env:
         - name: AERO_API_KEY
           value: "0cdFDvAgREHNAXtyeJiZcJeeADYMSKcr"  
